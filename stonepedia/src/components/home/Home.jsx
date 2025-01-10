@@ -50,7 +50,7 @@ const Home = () => {
   // };
 
   return (
-    <div className="bg-black">
+    <div className="">
       {/* <div className="h-[85vh] overflow-hidden">
         <div
           className="flex transition-transform ease-out duration-500 h-full"
