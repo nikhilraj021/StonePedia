@@ -14,13 +14,13 @@ const Signup = () => {
 
       <div className="relative z-10 flex justify-center items-center h-full bg-black bg-opacity-50">
         <div className="text-center m-3 md:px-8 md:w-[430px] w-full">
-          <div className="md:border bg-white bg-opacity-50 p-6 rounded-lg">
+          <div className="md:border bg-white bg-opacity-20 p-6 rounded-lg">
             <img
-              src="https://stonepedia.in/wp-content/uploads/2024/10/logoo-1.png"
+              src="https://stonepedia.in/wp-content/uploads/2024/10/white-logo.png"
               alt="logo"
               className="w-40 md:w-60 mx-auto"
             />
-            <p className="text-lg px-6 mb-4 font-semibold text-gray-900">
+            <p className="text-lg px-6 mb-4 font-semibold text-gray-200">
               Sign up to see awesome marbles and granites..
             </p>
 
@@ -46,11 +46,12 @@ const Signup = () => {
                 placeholder="Username"
               />
 
-              <p className="text-xs px-8 py-1">
-                By signing up, you agree to our
-                <span className="text-[#00376B]">Terms, Privacy Policy</span>
-                and <span className="text-[#00376B]">Cookies Policy.</span>
+              <p className="text-xs text-white px-8 py-1">
+                By signing up, you agree to our <nbsp/>
+                <span className="text-gray-300">Terms, Privacy Policy</span> <nbsp/>
+                and <span className="text-gray-300">Cookies Policy.</span>
               </p>
+              {/* text-[#00376B] */}
 
               <div className="md:py-3">
                 <button className="bg-gradient-to-r from-yellow-300 to-pink-800 hover:bg-gradient-to-r hover:from-pink-800 hover:to-yellow-300 w-60 md:w-72 text-white font-semibold py-1 rounded-md">

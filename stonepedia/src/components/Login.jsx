@@ -17,11 +17,11 @@ const Login = () => {
 
       <div className="relative z-10 flex justify-center items-center h-full bg-black bg-opacity-50">
         <div className="text-center m-3 md:px-8 md:w-[430px] w-full">
-          <div className="md:border bg-white bg-opacity-30 p-6 rounded-lg">
+          <div className="md:border bg-white bg-opacity-20 p-6 rounded-lg">
             <img
-              src="https://stonepedia.in/wp-content/uploads/2024/10/logoo-1.png"
+              src="https://stonepedia.in/wp-content/uploads/2024/10/white-logo.png"
               alt="logo"
-              className="w-60 mx-auto my-6"
+              className="w-60 mx-auto my-6 "
             />
 
             <form action="" className="space-y-2 md:flex flex-col items-center">
@@ -51,19 +51,19 @@ const Login = () => {
             <div className="flex justify-center items-center gap-4 my-5">
               <a
                 href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Fpli%3D1&ec=GAlAwAE&hl=en_GB&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1002799417%3A1736318843947362&ddm=1"
-                className="bg-gray-300 p-2 rounded-full bg-opacity-50 hover:bg-opacity-100"
+                className=" p-2 rounded-full bg-opacity-30  hover:bg-white border hover:border-orange-500"
               >
                 <FcGoogle size={22} className="" />
               </a>
               <a
                 href="https://www.facebook.com/login/"
-                className="bg-gray-300 p-2 rounded-full bg-opacity-50 hover:bg-opacity-100"
+                className="p-2 rounded-full bg-opacity-30 hover:bg-white border hover:border-blue-500 "
               >
                 <IoLogoFacebook size={22} className="text-[#385185]" />
               </a>
               <a
                 href="https://www.instagram.com/accounts/login/"
-                className="bg-gray-300 p-2 rounded-full bg-opacity-50 hover:bg-opacity-100"
+                className=" p-2 rounded-full bg-opacity-30 hover:bg-white border hover:border-pink-500"
               >
                 <GrInstagram size={22} className="text-pink-700" />
               </a>
@@ -76,7 +76,7 @@ const Login = () => {
             <p className="md:my-3 ">
               <Link
                 to="/password/reset"
-                className="text-sm md:text-base font-semibold text-gray-900 hover:text-white"
+                className="text-sm md:text-base font-semibold text-white hover:text-gray-300"
               >
                 Forgot password?
               </Link>
