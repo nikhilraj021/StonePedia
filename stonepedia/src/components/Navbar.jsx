@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
+import SubNavbar from "./home/SubNavbar";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -29,13 +31,13 @@ const Navbar = () => {
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled || isHovered ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className="p-4 space-y-4">
         <div>
           <div className="flex justify-between items-center">
-            {isScrolled ? (
+            {isScrolled || isHovered ? (
               <img
                 src="https://stonepedia.in/wp-content/uploads/2024/10/logoo-1.png"
                 alt="stonepedia-logo"
@@ -51,7 +53,7 @@ const Navbar = () => {
 
             <ul
               className={`hidden md:flex space-x-2 lg:space-x-8 font-semibold ${
-                isScrolled ? "text-black" : "text-gray-200"
+                isScrolled || isHovered ? "text-black" : "text-gray-200"
               } text-sm`}
             >
               {[
@@ -94,24 +96,11 @@ const Navbar = () => {
           {isScrolled ? (
             ""
           ) : (
-            <div className="text-white hidden md:flex justify-between mt-2">
-              <ul className="flex gap-5">
-                <li className="flex items-center gap-2">
-                  <span>
-                    <RxHamburgerMenu />
-                  </span>
-                  All Categories
-                </li>
-                <li>All Categories</li>
-              </ul>
-
-              <ul className="flex ">
-                <li>All Categories</li>
-                <li>All Categories</li>
-
-                <li>All Categories</li>
-              </ul>
-            </div>
+            <SubNavbar
+              isHovered={isHovered}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            />
           )}
         </div>
 
