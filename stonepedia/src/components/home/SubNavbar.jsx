@@ -5,7 +5,7 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
   return (
     <div className={`hidden md:flex justify-between mt-2 `}>
       <ul
-        className="flex gap-5"
+        className="flex gap-5 cursor-pointer"
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
@@ -29,7 +29,7 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
       </ul>
 
       <ul
-        className="flex gap-2"
+        className="flex gap-2 cursor-pointer"
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >

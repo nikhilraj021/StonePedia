@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
 import SubNavbar from "./home/SubNavbar";
@@ -56,33 +57,99 @@ const Navbar = () => {
                 isScrolled || isHovered ? "text-black" : "text-gray-200"
               } text-sm`}
             >
-              {[
-                "HOME",
-                "ABOUT US",
-                "SERVICES",
-                "CONTACT",
-                "SHOP BY CATEGORY",
-                "PARTNER WITH US",
-              ].map((item, index) => (
-                <motion.li
-                  key={index}
-                  whileHover={{
-                    y: -5,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 5,
-                  }}
+              <motion.li
+                whileHover={{
+                  y: -5,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 5,
+                }}
+              >
+                <a
+                  href="#"
+                  className="hover:text-orange-500 hover:underline underline-offset-4"
                 >
+                  HOME
+                </a>
+              </motion.li>
+
+              <motion.li
+                whileHover={{
+                  y: -5,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 5,
+                }}
+              >
+                <a
+                  href="#"
+                  className="hover:text-orange-500 hover:underline underline-offset-4"
+                >
+                  ABOUT US
+                </a>
+              </motion.li>
+
+              <motion.li
+                whileHover={{
+                  y: -5,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 5,
+                }}
+              >
+                <a
+                  href="#"
+                  className="hover:text-orange-500 hover:underline underline-offset-4"
+                >
+                  SERVICES
+                </a>
+              </motion.li>
+
+              <motion.li
+                whileHover={{
+                  y: -5,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 5,
+                }}
+              >
+                <a
+                  href="#"
+                  className="hover:text-orange-500 hover:underline underline-offset-4"
+                >
+                  CONTACT
+                </a>
+              </motion.li>
+
+              <Link to="/login">
+                <li className="bg-orange-500 px-2 rounded-xl">
                   <a
                     href="#"
-                    className="hover:text-orange-500 hover:underline underline-offset-4"
+                    className="hover:text-black "
                   >
-                    {item}
+                    LOGIN
                   </a>
-                </motion.li>
-              ))}
+                </li>
+              </Link>
+
+              <Link to="/signup">
+                <li className="bg-orange-500 px-2 rounded-xl">
+                  <a
+                    href="#"
+                    className="hover:text-black"
+                  >
+                    SIGNUP
+                  </a>
+                </li>
+              </Link>
             </ul>
 
             <span

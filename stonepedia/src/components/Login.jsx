@@ -18,11 +18,13 @@ const Login = () => {
       <div className="relative z-10 flex justify-center items-center h-full bg-black bg-opacity-50">
         <div className="text-center m-3 md:px-8 md:w-[430px] w-full">
           <div className="md:border bg-white bg-opacity-20 p-6 rounded-lg">
-            <img
-              src="https://stonepedia.in/wp-content/uploads/2024/10/white-logo.png"
-              alt="logo"
-              className="w-60 mx-auto my-6 "
-            />
+            <Link to="/">
+              <img
+                src="https://stonepedia.in/wp-content/uploads/2024/10/white-logo.png"
+                alt="logo"
+                className="w-60 mx-auto my-6 "
+              />
+            </Link>
 
             <form action="" className="space-y-2 md:flex flex-col items-center">
               <input
