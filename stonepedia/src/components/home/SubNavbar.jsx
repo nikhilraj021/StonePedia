@@ -24,6 +24,11 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
             { name: "Random7", image: "https://picsum.photos/150?random=3" },
             { name: "Random8", image: "https://picsum.photos/150?random=4" },
             { name: "Random9", image: "https://picsum.photos/150?random=5" },
+            { name: "Random5", image: "https://picsum.photos/150?random=5" },
+            { name: "Random6", image: "https://picsum.photos/150?random=6" },
+            { name: "Random7", image: "https://picsum.photos/150?random=3" },
+            { name: "Random8", image: "https://picsum.photos/150?random=4" },
+            { name: "Random9", image: "https://picsum.photos/150?random=5" },
           ],
         },
         {
@@ -33,6 +38,216 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
             { name: "Random2", image: "https://picsum.photos/150?random=2" },
             { name: "Random3", image: "https://picsum.photos/150?random=3" },
             { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+        {
+          name: "Subcategory 1.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+            { name: "Random5", image: "https://picsum.photos/150?random=5" },
+            { name: "Random6", image: "https://picsum.photos/150?random=6" },
+            { name: "Random7", image: "https://picsum.photos/150?random=3" },
+            { name: "Random8", image: "https://picsum.photos/150?random=4" },
+            { name: "Random9", image: "https://picsum.photos/150?random=5" },
+          ],
+        },
+        {
+          name: "Subcategory 1.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+        {
+          name: "Subcategory 1.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+            { name: "Random5", image: "https://picsum.photos/150?random=5" },
+            { name: "Random6", image: "https://picsum.photos/150?random=6" },
+            { name: "Random7", image: "https://picsum.photos/150?random=3" },
+            { name: "Random8", image: "https://picsum.photos/150?random=4" },
+            { name: "Random9", image: "https://picsum.photos/150?random=5" },
+          ],
+        },
+        {
+          name: "Subcategory 1.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+        {
+          name: "Subcategory 1.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+            { name: "Random5", image: "https://picsum.photos/150?random=5" },
+            { name: "Random6", image: "https://picsum.photos/150?random=6" },
+            { name: "Random7", image: "https://picsum.photos/150?random=3" },
+            { name: "Random8", image: "https://picsum.photos/150?random=4" },
+            { name: "Random9", image: "https://picsum.photos/150?random=5" },
+          ],
+        },
+        {
+          name: "Subcategory 1.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+        {
+          name: "Subcategory 1.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+            { name: "Random5", image: "https://picsum.photos/150?random=5" },
+            { name: "Random6", image: "https://picsum.photos/150?random=6" },
+            { name: "Random7", image: "https://picsum.photos/150?random=3" },
+            { name: "Random8", image: "https://picsum.photos/150?random=4" },
+            { name: "Random9", image: "https://picsum.photos/150?random=5" },
+          ],
+        },
+        {
+          name: "Subcategory 1.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Category 2",
+      subcategories: [
+        {
+          name: "Subcategory 2.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+        {
+          name: "Subcategory 2.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Category 3",
+      subcategories: [
+        {
+          name: "Subcategory 3.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+        {
+          name: "Subcategory 3.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Category 1",
+      subcategories: [
+        {
+          name: "Subcategory 1.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+            { name: "Random5", image: "https://picsum.photos/150?random=5" },
+            { name: "Random6", image: "https://picsum.photos/150?random=6" },
+            { name: "Random7", image: "https://picsum.photos/150?random=3" },
+            { name: "Random8", image: "https://picsum.photos/150?random=4" },
+            { name: "Random9", image: "https://picsum.photos/150?random=5" },
+          ],
+        },
+        {
+          name: "Subcategory 1.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Category 2",
+      subcategories: [
+        {
+          name: "Subcategory 2.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+        {
+          name: "Subcategory 2.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Category 3",
+      subcategories: [
+        {
+          name: "Subcategory 3.1",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
+            { name: "Random4", image: "https://picsum.photos/150?random=4" },
+          ],
+        },
+        {
+          name: "Subcategory 3.2",
+          subsubcategories: [
+            { name: "Random1", image: "https://picsum.photos/150?random=1" },
+            { name: "Random2", image: "https://picsum.photos/150?random=2" },
+            { name: "Random3", image: "https://picsum.photos/150?random=3" },
           ],
         },
       ],
@@ -117,8 +332,8 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
           </span>
           All Categories
           {isCategoriesHovered && (
-            <div className="absolute top-6 -left-4 right-0 flex bg-white shadow-lg rounded-md p-2 z-50 w-[100vw]">
-              <ul className="w-1/4 border-r border-gray-200 h-60 overflow-y-auto mt-5 ">
+            <div className="absolute top-6 -left-4 right-0 flex bg-white shadow-lg rounded-md p-2 z-50 w-[100vw] h-80 lg:h-96 px-5">
+              <ul className="w-1/4 border-r border-gray-200 lg:max-h-96 overflow-y-auto mt-5 space-y-5 ">
                 {categories.map((category, index) => (
                   <li
                     key={index}
@@ -139,7 +354,7 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
               {/* Subcategories and Sub-subcategories List */}
               <div className="flex w-full justify-between px-4 mt-5">
                 {/* Subcategories List */}
-                <ul className="w-1/3 h-60 border-r border-gray-200 overflow-y-auto">
+                <ul className="w-2/5 lg:w-1/3 border-r border-gray-200 overflow-y-auto space-y-3">
                   {categories[hoveredCategory]?.subcategories.map(
                     (subcategory, subIndex) => (
                       <li
@@ -162,7 +377,7 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
                 </ul>
 
                 {/* Sub-subcategories List */}
-                <ul className="w-full pl-4 h-60 overflow-y-auto grid grid-cols-2 lg:grid-cols-4 ">
+                <ul className="w-full pl-4 overflow-y-auto grid grid-cols-2 lg:grid-cols-4 ">
                   {categories[hoveredCategory]?.subcategories[
                     hoveredSubcategory
                   ]?.subsubcategories.map((subSubcategory, subSubIndex) => (
