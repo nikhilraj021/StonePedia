@@ -51,9 +51,11 @@ const CarouselCard = ({ title, description, imageUrl, overlayColor }) => {
             flex flex-col items-center justify-center
             p-4 text-center text-black
             opacity-0
-            ${overlayColor}
-            transition-opacity duration-1000
-            group-hover:opacity-100
+            translate-x-full
+          ${overlayColor}
+          transition-all duration-1000
+          group-hover:opacity-100
+          group-hover:translate-x-0
           `}
       >
         <h3 className="text-2xl font-bold">{title}</h3>
