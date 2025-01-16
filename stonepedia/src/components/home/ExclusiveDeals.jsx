@@ -9,36 +9,42 @@ const ExclusiveDeals = () => {
       title: "Dhoni and E-Motorad",
       description: 'M.S. Dhoni sings "Bole Jo Koyal"',
       image: "path_to_image1",
+      color: "red",
     },
     {
       id: 2,
       title: "Mirzapur S3 Launch",
       description: "Deepfake & LipSync Campaign for Prime Video",
       image: "path_to_image2",
+      color: "blue",
     },
     {
       id: 3,
       title: "112 Emergency AI Agents",
       description: "Live Translation & Voice Agents for Bangalore Police",
       image: "path_to_image3",
+      color: "green",
     },
     {
       id: 4,
       title: "Scene Stitch",
       description: "Short Form Video at Scale",
       image: "path_to_image4",
+      color: "yellow",
     },
     {
       id: 5,
       title: "112 Emergency AI Agents",
       description: "Live Translation & Voice Agents for Bangalore Police",
       image: "path_to_image3",
+      color: "orange",
     },
     {
       id: 6,
       title: "Scene Stitch",
       description: "Short Form Video at Scale",
       image: "path_to_image4",
+      color: "blue",
     },
   ];
 
@@ -69,7 +75,7 @@ const ExclusiveDeals = () => {
           {items.map((item, index) => (
             <div
               key={item.id}
-              className={`flex-shrink-0 w-1/4 px-4 transition-all duration-500 ${
+              className={`flex-shrink-0 w-1/4 h-60 px-4 transition-all duration-500 ${
                 index === currentIndex
                   ? "opacity-50 transform scale-50"
                   : index === (currentIndex + 1) % items.length
@@ -81,15 +87,13 @@ const ExclusiveDeals = () => {
                   : ""
               }`}
             >
-              <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-40 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-white">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.description}</p>
+              <div
+                className="rounded-lg shadow-lg h-full cursor-pointer relative group overflow-hidden"
+                style={{ backgroundColor: item.color }}
+              >
+                {/* Text Content */}
+                <div className="absolute bottom-4 left-0 w-full text-white transition-transform duration-500 transform group-hover:-translate-y-48">
+                  <h3 className="text-lg font-bold">{item.title}</h3>
                 </div>
               </div>
             </div>
