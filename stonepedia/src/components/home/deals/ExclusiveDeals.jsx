@@ -73,23 +73,21 @@ const ExclusiveDeals = () => {
 
   return (
     <div className="relative w-full min-h-[700px] bg-gray-900 flex flex-col justify-center items-center">
-      <h2 className="text-white text-2xl font-semibold mb-6">
-        Exclusive Deals
-      </h2>
+      <h2 className="text-white text-2xl font-semibold mb-6">Exclusive Deals</h2>
 
       {/* Carousel Container */}
-      <div className="relative w-[90%] max-w-7xl h-[400px] overflow-hidden flex items-center">
+      <div className="relative w-[90%] max-w-7xl h-[500px] overflow-hidden flex items-center">
         {/* Left/Right Buttons */}
         <button
           onClick={handlePrev}
-          className="absolute z-10 left-[340px] transform -translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white focus:outline-none"
+          className="absolute z-10 left-8 transform -translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white focus:outline-none"
         >
           &#8592;
         </button>
 
         <button
           onClick={handleNext}
-          className="absolute z-10 right-[340px] transform translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white focus:outline-none"
+          className="absolute z-10 right-8 transform translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white focus:outline-none"
         >
           &#8594;
         </button>
@@ -97,7 +95,7 @@ const ExclusiveDeals = () => {
         {/* 4-Column Grid */}
         <div className="grid grid-cols-4 w-full h-full gap-4 relative">
           {visibleItems.map((item, i) => {
-            // The middle two columns (indices 1 and 2) are fully opaque;
+            // The middle two columns (indices 1 and 2) are fully opaque; 
             // The outer columns (0, 3) are half opaque to achieve the partial look.
             const isCenter = i === 1 || i === 2;
             const cardOpacity = isCenter ? "opacity-100" : "opacity-50 scale-90";

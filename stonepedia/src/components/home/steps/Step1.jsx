@@ -23,8 +23,8 @@ const Step1 = () => {
           </div>
 
           <div className=" border-y mt-5">
-            <div className="flex items-center justify-between py-3">
-              <h1>We learn from you</h1>
+            <div className="flex items-center justify-between py-3 px-2">
+              <h1 className="text-lg font-semibold">We learn from you</h1>
               {isOpen ? (
                 <FaMinus className="cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
               ) : (
@@ -32,7 +32,7 @@ const Step1 = () => {
               )}
             </div>
             {isOpen ? (
-              <ul className="ml-5 my-2">
+              <ul className="ml-5 mb-2">
                 <li className="list-disc">Identify painpoints</li>
                 <li className="list-disc">Uncover opportunities</li>
                 <li className="list-disc">Flag ineffeciences</li>
