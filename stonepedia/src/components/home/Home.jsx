@@ -9,7 +9,8 @@ import Blogs from "./Blogs";
 import News from "./News";
 import Testimonials from "./Testimonials";
 import LandingPage from "./LandingPage";
-import ExclusiveDeals from "./ExclusiveDeals";
+import ExclusiveDeals from "./deals/ExclusiveDeals";
+import Steps from "./steps/Steps";
 
 const images = [
   {
@@ -99,6 +100,7 @@ const Home = () => {
       <ExclusiveDeals />
       <Support />
       <News />
+      <Steps />
       <Clients />
       <Blogs />
       <Testimonials />
