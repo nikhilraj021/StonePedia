@@ -9,6 +9,7 @@ import Blogs from "./Blogs";
 import News from "./News";
 import Testimonials from "./Testimonials";
 import LandingPage from "./LandingPage";
+import ExclusiveDeals from "./ExclusiveDeals";
 
 const images = [
   {
@@ -95,7 +96,7 @@ const Home = () => {
       <LandingPage />
       <About />
       <Category />
-
+      <ExclusiveDeals />
       <Support />
       <News />
       <Clients />
