@@ -36,7 +36,9 @@ const Navbar = () => {
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isNotHome || isHovered ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled || isNotHome || isHovered
+          ? "bg-white shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="p-4 space-y-4">
@@ -58,26 +60,30 @@ const Navbar = () => {
 
             <ul
               className={`hidden md:flex space-x-2 lg:space-x-8 font-semibold ${
-                isScrolled || isNotHome || isHovered ? "text-black" : "text-gray-200"
+                isScrolled || isNotHome || isHovered
+                  ? "text-black"
+                  : "text-gray-200"
               } text-sm`}
             >
-              <motion.li
-                whileHover={{
-                  y: -5,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 5,
-                }}
-              >
-                <a
-                  href="#"
-                  className="hover:text-orange-500 hover:underline underline-offset-4"
+              <Link to="/">
+                <motion.li
+                  whileHover={{
+                    y: -5,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 5,
+                  }}
                 >
-                  HOME
-                </a>
-              </motion.li>
+                  <a
+                    href="#"
+                    className="hover:text-orange-500 hover:underline underline-offset-4"
+                  >
+                    HOME
+                  </a>
+                </motion.li>
+              </Link>
 
               <motion.li
                 whileHover={{

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
   const [isCategoriesHovered, setIsCategoriesHovered] = useState(false);
@@ -408,15 +409,17 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
         </li>
 
         {/* Shop Item - Bold on hover */}
-        <li
-          className={`cursor-pointer ${
-            isHovered ? "text-black" : "text-white"
-          } ${isShopHovered ? "font-bold underline underline-offset-4" : ""}`}
-          onMouseEnter={() => setIsShopHovered(true)}
-          onMouseLeave={() => setIsShopHovered(false)}
-        >
-          Shop By Category
-        </li>
+        <Link to="/category">
+          <li
+            className={`cursor-pointer ${
+              isHovered ? "text-black" : "text-white"
+            } ${isShopHovered ? "font-bold underline underline-offset-4" : ""}`}
+            onMouseEnter={() => setIsShopHovered(true)}
+            onMouseLeave={() => setIsShopHovered(false)}
+          >
+            Shop By Category
+          </li>
+        </Link>
       </ul>
     </div>
   );
