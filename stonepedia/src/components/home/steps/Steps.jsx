@@ -19,7 +19,7 @@ const Steps = () => {
       },
       {
         root: null,
-        threshold: 0.9, // Trigger when 70% of the element is visible
+        threshold: 0.9, // Trigger when 90% of the element is visible
       }
     );
 

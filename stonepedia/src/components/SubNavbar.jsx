@@ -415,7 +415,7 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
           onMouseEnter={() => setIsShopHovered(true)}
           onMouseLeave={() => setIsShopHovered(false)}
         >
-          Shop
+          Shop By Category
         </li>
       </ul>
     </div>
