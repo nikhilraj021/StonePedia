@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
 import SubNavbar from "./SubNavbar";
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -29,16 +30,19 @@ const Navbar = () => {
     };
   }, []);
 
+  // Determine if navbar should have a background color
+  const isNotHome = location.pathname !== "/";
+
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isHovered ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled || isNotHome || isHovered ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className="p-4 space-y-4">
         <div>
           <div className="flex justify-between items-center">
-            {isScrolled || isHovered ? (
+            {isScrolled || isNotHome || isHovered ? (
               <img
                 src="https://stonepedia.in/wp-content/uploads/2024/10/logoo-1.png"
                 alt="stonepedia-logo"
@@ -54,7 +58,7 @@ const Navbar = () => {
 
             <ul
               className={`hidden md:flex space-x-2 lg:space-x-8 font-semibold ${
-                isScrolled || isHovered ? "text-black" : "text-gray-200"
+                isScrolled || isNotHome || isHovered ? "text-black" : "text-gray-200"
               } text-sm`}
             >
               <motion.li
@@ -131,10 +135,7 @@ const Navbar = () => {
 
               <Link to="/login">
                 <li className="bg-orange-500 px-2 rounded-xl">
-                  <a
-                    href="#"
-                    className="hover:text-black "
-                  >
+                  <a href="#" className="hover:text-black ">
                     LOGIN
                   </a>
                 </li>
@@ -142,10 +143,7 @@ const Navbar = () => {
 
               <Link to="/signup">
                 <li className="bg-orange-500 px-2 rounded-xl">
-                  <a
-                    href="#"
-                    className="hover:text-black"
-                  >
+                  <a href="#" className="hover:text-black">
                     SIGNUP
                   </a>
                 </li>
@@ -154,15 +152,16 @@ const Navbar = () => {
 
             <span
               onClick={toggleMenu}
-              className="cursor-pointer md:hidden text-white"
+              className={`cursor-pointer md:hidden ${
+                isScrolled || isNotHome ? "text-black" : "text-white"
+              }`}
             >
               <RxHamburgerMenu size={28} />
             </span>
           </div>
 
-          {isScrolled ? (
-            ""
-          ) : (
+          {/* Conditionally render SubNavbar on Home route */}
+          {location.pathname === "/" && !isScrolled && (
             <SubNavbar
               isHovered={isHovered}
               onMouseEnter={() => setIsHovered(true)}

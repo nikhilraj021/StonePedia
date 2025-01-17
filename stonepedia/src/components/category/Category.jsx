@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import ExclusiveDeals from "./ExclusiveDeals";
+import AllProducts from "./AllProducts";
 
 const Category = () => {
   return (
-    <div>Category</div>
-  )
-}
+    <div className="pt-28 h-screen">
+      <ExclusiveDeals />
+      <AllProducts />
+    </div>
+  );
+};
 
-export default Category
+export default Category;
