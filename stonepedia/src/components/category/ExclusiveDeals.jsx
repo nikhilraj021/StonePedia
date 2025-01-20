@@ -45,10 +45,10 @@ const ExclusiveDeals = () => {
             <div className="p-3">
               <h2 className="md:text-base lg:text-xl font-semibold">{deal.title}</h2>
               <p className="text-gray-500 md:text-sm lg:text-base">By {deal.shopBy}</p>
-              <div className="flex justify-between items-center mt-2">
-                <p className="text-gray-900 font-bold md:text-base lg:text-lg">
+              <div className="flex justify-end items-center mt-2">
+                {/* <p className="text-gray-900 font-bold md:text-base lg:text-lg">
                   Rs {deal.price}/-
-                </p>
+                </p> */}
                 <p className="text-white md:text-sm lg:text-base font-semibold bg-[#3b82f6] px-2 py-1 rounded-lg">{deal.rating} ★</p>
               </div>
             </div>

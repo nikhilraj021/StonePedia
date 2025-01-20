@@ -1,8 +1,13 @@
 import React from "react";
 import { IoSearch } from "react-icons/io5";
-import { RiStarSFill } from "react-icons/ri";
 
-const Sorting = () => {
+const Sorting = ({
+  searchQuery,
+  setSearchQuery,
+  setSelectedCategory,
+  setSelectedColor,
+  setIsSelectedRating
+}) => {
   const categoryList = [
     {
       id: 1,
@@ -122,30 +127,48 @@ const Sorting = () => {
       id: 1,
       ratingUrl:
         "https://assets.ccbp.in/frontend/react-js/rating-four-stars-img.png",
+        ratingValue : 4,
     },
     {
       id: 2,
       ratingUrl:
         "https://assets.ccbp.in/frontend/react-js/rating-three-stars-img.png",
+        ratingValue : 3, 
     },
     {
       id: 3,
       ratingUrl:
         "https://assets.ccbp.in/frontend/react-js/rating-two-stars-img.png",
+        ratingValue : 2,
     },
     {
       id: 4,
       ratingUrl:
         "https://assets.ccbp.in/frontend/react-js/rating-one-star-img.png",
+        ratingValue : 1,
     },
   ];
 
+  const handleClearFilters = () => {
+    setSearchQuery("");
+    setSelectedCategory("");
+    setSelectedColor([]);
+    setIsSelectedRating(null)
+    document.querySelectorAll("input[type=checkbox]").forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+    document.querySelectorAll("input[type=radio]").forEach((radio) => {
+      radio.checked = false;
+    });
+  };
   return (
     <div className="border p-3 h-full rounded-lg shadow-lg">
       <div className="flex items-center gap-2 border bg-gray-300 p-2 rounded-lg">
         <input
           id="search-icon"
           type="search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           className="bg-transparent w-full placeholder:text-gray-700 outline-none "
           placeholder="Search..."
         />
@@ -166,6 +189,8 @@ const Sorting = () => {
                 id={`radio-${category.id}`}
                 className="mr-2 cursor-pointer"
                 name="category"
+                value={category.title}
+                onChange={(e) => setSelectedCategory(e.target.value)}
               />
               <label
                 htmlFor={`radio-${category.id}`}
@@ -183,7 +208,20 @@ const Sorting = () => {
         <div className="md:grid gap-1 grid-cols-2 my-2 ml-2">
           {colorsList.map((color) => (
             <li key={color.id} className="list-none space-x-1">
-              <input id={`checkbox-${color.id}`} type="checkbox" />
+              <input
+                id={`checkbox-${color.id}`}
+                type="checkbox"
+                value={color.color}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setSelectedColor((prevColors) => [...prevColors, e.target.value]);
+                  } else {
+                    setSelectedColor((prevColors) =>
+                      prevColors.filter((col) => col !== e.target.value)
+                    );
+                  }
+                }}
+              />
               <label
                 htmlFor={`checkbox-${color.id}`}
                 className="cursor-pointer"
@@ -201,6 +239,7 @@ const Sorting = () => {
           {ratingList.map((eachRating) => (
             <li
               key={eachRating.id}
+              onClick={() => setIsSelectedRating(eachRating.ratingValue)}
               className="list-none flex items-center gap-3 cursor-pointer"
             >
               <img src={eachRating.ratingUrl} alt="" className="w-3/5" />
@@ -213,6 +252,7 @@ const Sorting = () => {
       <div className="flex justify-end mt-8">
         <button
           type="button"
+          onClick={handleClearFilters}
           className="border border-[#0967d2] text-[#0967d2] font-semibold px-4 py-1 rounded-lg"
         >
           Clear Filters
