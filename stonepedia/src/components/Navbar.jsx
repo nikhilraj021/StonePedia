@@ -44,19 +44,21 @@ const Navbar = () => {
       <div className="p-4 space-y-4">
         <div>
           <div className="flex justify-between items-center">
-            {isScrolled || isNotHome || isHovered ? (
-              <img
-                src="https://stonepedia.in/wp-content/uploads/2024/10/logoo-1.png"
-                alt="stonepedia-logo"
-                className="w-40"
-              />
-            ) : (
-              <img
-                src="https://stonepedia.in/wp-content/uploads/2024/10/white-logo.png"
-                alt="stonepedia-logo"
-                className="w-40"
-              />
-            )}
+            <Link to="/">
+              {isScrolled || isNotHome || isHovered ? (
+                <img
+                  src="https://stonepedia.in/wp-content/uploads/2024/10/logoo-1.png"
+                  alt="stonepedia-logo"
+                  className="w-40"
+                />
+              ) : (
+                <img
+                  src="https://stonepedia.in/wp-content/uploads/2024/10/white-logo.png"
+                  alt="stonepedia-logo"
+                  className="w-40"
+                />
+              )}
+            </Link>
 
             <ul
               className={`hidden md:flex space-x-2 lg:space-x-8 font-semibold ${

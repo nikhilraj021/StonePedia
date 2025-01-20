@@ -96,15 +96,15 @@ const Home = () => {
       </div> */}
       <LandingPage />
       <About />
-      <Category />
-      <ExclusiveDeals />
-      <Support />
-      <News />
-      <Steps />
-      <Clients />
-      <Blogs />
-      <Testimonials />
-      <Footer />
+      {/* <Category /> */}
+      {/* <ExclusiveDeals /> */}
+      {/* <Support /> */}
+      {/* <News /> */}
+      {/* <Steps /> */}
+      {/* <Clients /> */}
+      {/* <Blogs /> */}
+      {/* <Testimonials /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

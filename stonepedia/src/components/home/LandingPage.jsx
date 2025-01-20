@@ -4,7 +4,7 @@ import { IoSearch } from "react-icons/io5";
 
 const LandingPage = () => {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-[70vh]">
       <video
         src="/background-video.mp4"
         loop
@@ -12,12 +12,12 @@ const LandingPage = () => {
         autoPlay
         className="h-full absolute inset-0 w-full object-cover"
       />
-      <div className="relative bg-gradient-to-br from-black h-full bg-opacity-50 z-10 flex items-center">
-        <div className="absolute left-5 md:left-10 xl:left-20 space-y-2 md:space-y-5 xl:space-y-8 w-2/3">
-          <p className="text-sm md:text-xl xl:text-2xl text-white">
+      <div className="relative bg-gradient-to-br from-black h-full bg-opacity-50 z-10 flex items-center justify-center">
+        <div className="absolute left-5 md:left-10 xl:left-20 space-y-2 lg:space-y-3 xl:space-y-4 w-2/3">
+          <p className="text-sm md:text-lg lg:text-xl xl:text-2xl text-white">
             Learn about StonePedia.com
           </p>
-          <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white">
+          <h1 className="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-white">
             The Leading B2B ecommerce platform for global trade
           </h1>
           <div className="md:mt-5 flex bg-white rounded-full p-1 lg:p-3 gap-2 md:gap-5">
