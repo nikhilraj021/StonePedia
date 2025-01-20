@@ -48,13 +48,13 @@ const About = () => {
 
   return (
     <div
-      className="bg-cover bg-center relative py-5 "
+      className="bg-cover bg-center bg-gradient-to-br from-gray-400 via-gray-700 to-gray-900 relative py-5 "
     >
       <div className="relative flex flex-col justify-center items-center text-center space-y-4 px-4">
         <p className="text-sm md:text-lg font-semibold text-yellow-400">
           REDEFINING STONE SOURCING
         </p>
-        <h1 className="text-2xl md:text-4xl font-serif text-gray-600">
+        <h1 className="text-2xl md:text-4xl font-serif text-white">
           Why <span className="text-red-500">StonePedia</span>?
         </h1>
 

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import Sorting from "./Sorting";
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const AllProducts = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedColor, setSelectedColor] = useState([]);
   const [selectedRating, setSelectedRating] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
+  const itemsPerPage = 8;
 
   const allProducts = [
     {
@@ -83,6 +86,8 @@ const AllProducts = () => {
     },
   ];
 
+ 
+
   const filteredProducts = allProducts.filter((product) => {
     const matchesSearch = product.title
       .toLowerCase()
@@ -102,6 +107,17 @@ const AllProducts = () => {
     return matchesSearch && matchesCategory && matchesColor && matchesRating;
   });
 
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className="md:px-10 lg:px-16 xl:px-20 2xl:px-32 px-5 md:flex gap-10">
       <Sorting
@@ -111,41 +127,13 @@ const AllProducts = () => {
         setSelectedColor={setSelectedColor}
         setIsSelectedRating={setSelectedRating}
       />
-      <div className=" w-full border mb-5 rounded-lg shadow-lg">
+      <div className="w-full border mb-5 rounded-lg shadow-lg">
         <div className="flex justify-between pt-3 px-5">
           <h1 className="font-bold text-2xl text-gray-100">All Products</h1>
-          {/* <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1">
-              <span className="text-xl font-semibold">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  class="sort-by-icon"
-                  height="1em"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M14 10.5a.5.5 0 00-.5-.5h-3a.5.5 0 000 1h3a.5.5 0 00.5-.5zm0-3a.5.5 0 00-.5-.5h-7a.5.5 0 000 1h7a.5.5 0 00.5-.5zm0-3a.5.5 0 00-.5-.5h-11a.5.5 0 000 1h11a.5.5 0 00.5-.5z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </span>
-              <p className="font-semibold">Sort by</p>
-            </div>
-
-            <select id="price-sort" className=" outline-none cursor-pointer">
-              <option value="">Price (High - Low)</option>
-              <option value="">Price (Low - High)</option>
-            </select>
-          </div> */}
         </div>
-        {filteredProducts.length > 0 ? (
+        {paginatedProducts.length > 0 ? (
           <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4 lg:gap-10 p-5 w-full">
-            {filteredProducts.map((product) => (
+            {paginatedProducts.map((product) => (
               <li
                 key={product.id}
                 className="border rounded-lg shadow-md hover:shadow-lg cursor-pointer bg-gray-500"
@@ -163,9 +151,6 @@ const AllProducts = () => {
                     By {product.shopBy}
                   </p>
                   <div className="flex justify-end items-center mt-2">
-                    {/* <p className="text-gray-900 font-bold md:text-base lg:text-lg">
-                    Rs {product.price}/-
-                  </p> */}
                     <p className="text-white md:text-sm lg:text-base font-semibold bg-[#3b82f6] px-2 py-1 rounded-lg">
                       {product.rating} ★
                     </p>
@@ -175,8 +160,52 @@ const AllProducts = () => {
             ))}
           </ul>
         ) : (
-          <div className="text-center ">
-            <p className=" text-gray-400">No Products Found</p>
+          <div className="text-center">
+            <p className="text-gray-400">No Products Found</p>
+          </div>
+        )}
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center gap-2 py-3">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`p-3 rounded-full ${
+                currentPage === 1
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "bg-orange-500 text-white"
+              }`}
+            >
+              <span>
+                <FaAngleDoubleLeft size={20} />
+              </span>
+            </button>
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => handlePageChange(index + 1)}
+                className={`px-4 py-2 rounded-full ${
+                  currentPage === index + 1
+                    ? "bg-orange-500 text-white"
+                    : "bg-gray-300 text-gray-700"
+                }`}
+              >
+                {index + 1}
+              </button>
+            ))}
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`p-3 rounded-full ${
+                currentPage === totalPages
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "bg-orange-500 text-white"
+              }`}
+            >
+              <span>
+                <FaAngleDoubleRight size={20} />
+              </span>
+            </button>
           </div>
         )}
       </div>
