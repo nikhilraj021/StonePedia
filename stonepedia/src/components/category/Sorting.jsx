@@ -162,7 +162,7 @@ const Sorting = ({
     });
   };
   return (
-    <div className="border p-3 h-full rounded-lg shadow-lg">
+    <div className="border p-3 h-full rounded-lg shadow-lg bg-white">
       <div className="flex items-center gap-2 border bg-gray-300 p-2 rounded-lg">
         <input
           id="search-icon"

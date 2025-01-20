@@ -103,7 +103,7 @@ const AllProducts = () => {
   });
 
   return (
-    <div className="md:px-10 px-5 my-10 md:flex gap-10">
+    <div className="md:px-10 lg:px-16 xl:px-20 2xl:px-32 px-5 md:flex gap-10">
       <Sorting
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -113,7 +113,7 @@ const AllProducts = () => {
       />
       <div className=" w-full border mb-5 rounded-lg shadow-lg">
         <div className="flex justify-between pt-3 px-5">
-          <h1 className="font-bold text-2xl text-gray-500">All Products</h1>
+          <h1 className="font-bold text-2xl text-gray-100">All Products</h1>
           {/* <div className="flex items-center gap-2">
             <div className="flex items-center gap-1">
               <span className="text-xl font-semibold">
@@ -144,11 +144,11 @@ const AllProducts = () => {
           </div> */}
         </div>
         {filteredProducts.length > 0 ? (
-          <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-10 p-5 w-full">
+          <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4 lg:gap-10 p-5 w-full">
             {filteredProducts.map((product) => (
               <li
                 key={product.id}
-                className="border rounded-lg shadow-md hover:shadow-lg cursor-pointer"
+                className="border rounded-lg shadow-md hover:shadow-lg cursor-pointer bg-gray-500"
               >
                 <img
                   src={product.image}
@@ -159,7 +159,7 @@ const AllProducts = () => {
                   <h2 className="md:text-base lg:text-xl font-semibold">
                     {product.title}
                   </h2>
-                  <p className="text-gray-500 md:text-sm lg:text-base">
+                  <p className="text-orange-500 md:text-sm lg:text-base">
                     By {product.shopBy}
                   </p>
                   <div className="flex justify-end items-center mt-2">
